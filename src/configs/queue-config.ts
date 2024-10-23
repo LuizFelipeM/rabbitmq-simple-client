@@ -17,5 +17,5 @@ export class QueueConfig {
     public name: string,
     public qos?: QueueQos,
     public options?: QueueOptions,
-    public bidings?: QueueBinding[]) { }
+    public bindings?: QueueBinding[]) { }
 }

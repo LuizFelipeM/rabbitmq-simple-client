@@ -2,16 +2,32 @@
   "name": "amqp-simple-client",
   "version": "1.0.0",
   "description": "A simple wrapper of AMQP support for RabbitMQ/LavinMQ for services communication without overhead",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "amqp",
+    "amqplib",
+    "rabbit",
+    "rabbitmq",
+    "client",
+    "message bus",
+    "message broker"
+  ],
+  "author": {
+    "name": "Luiz Felipe Moura",
+    "email": "luiz.moura@dltagg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuizFelipeM/amqp-simple-client.git"
+  },
+  "license": "MIT",
   "dependencies": {
-    "amqplib": "^0.10.4",
-    "rxjs": "^7.8.1"
+    "amqplib": "^0.10.4"
   },
   "devDependencies": {
     "@types/amqplib": "^0.10.5",
