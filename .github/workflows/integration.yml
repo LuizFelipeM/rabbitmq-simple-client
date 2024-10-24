@@ -22,30 +22,33 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
       
-      - name: Install pnpm
+      - name: Install pnpm ✨
         uses: pnpm/action-setup@v4
         with:
           version: 9
           run_install: false
       
-      - name: Install Node.js
+      - name: Install Node.js ✨
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: pnpm
 
       # Install dependencies to start the workflow
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install dependencies 📦️
+        run: pnpm install --frozen-lockfile
+      
+      - name: Build 🔨
+        run: pnpm build
 
       # Runs tests in the project
       # - name: Run tests
       #   run: npm test
 
-      - name: Publish package
-        uses: JS-DevTools/npm-publish@v3
+      - name: Publish package 📬
+        uses: simenandre/publish-with-pnpm@v2
         with:
-          token: ${{ secrets.NPM_TOKEN }}
+          npm-auth-token: ${{ secrets.NPM_TOKEN }}
