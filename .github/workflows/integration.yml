@@ -48,7 +48,11 @@ jobs:
       # - name: Run tests
       #   run: npm test
 
+      # - name: Publish package 📬
+      #   uses: simenandre/publish-with-pnpm@v2
+      #   with:
+      #     npm-auth-token: ${{ secrets.NPM_TOKEN }}
       - name: Publish package 📬
-        uses: simenandre/publish-with-pnpm@v2
+        uses: JS-DevTools/npm-publish@v3
         with:
-          npm-auth-token: ${{ secrets.NPM_TOKEN }}
+          token: ${{ secrets.NPM_TOKEN }}
