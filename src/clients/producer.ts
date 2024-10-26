@@ -1,8 +1,8 @@
 import { Channel, Options } from "amqplib";
-import { AmqpClient } from "./amqp-client";
 import { ExchangeConfig } from "../configs/exchange-config";
+import { BasicClient } from "./basic-client";
 
-export class Producer<TPayload> extends AmqpClient {
+export class Producer<TPayload> extends BasicClient {
   constructor(url: string, private readonly config: ExchangeConfig) {
     super(url)
   }

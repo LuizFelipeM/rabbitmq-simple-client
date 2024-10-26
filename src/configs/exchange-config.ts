@@ -1,4 +1,4 @@
-export type ExchangeType = "direct" | "topic" | "headers" | "fanout" | "match" | string
+export type ExchangeType = "direct" | "topic" | "headers" | "fanout" | "match"
 
 export class ExchangeConfig {
   constructor(

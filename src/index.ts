@@ -1,4 +1,7 @@
+export * from "./clients/amqp-client"
 export * from "./clients/producer"
 export * from "./configs/exchange-config"
 export * from "./clients/consumer"
 export * from "./configs/queue-config"
+export * from "./types/subscription"
+export * from "./types/consumer-message"
